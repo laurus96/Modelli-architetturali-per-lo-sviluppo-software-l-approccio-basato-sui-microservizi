@@ -1,0 +1,40 @@
+\RequirePackage{silence}
+\WarningFilter{latex}{Writing or overwriting file}
+
+\begin{filecontents*}[overwrite]{\jobname.xmpdata}
+\Title{Modelli architetturali per lo sviluppo software: l'approccio basato sui microservizi}
+\Author{Lorenzo Paolo Cocchinone}
+\Language{it-IT}
+\Subject{Sviluppo di un applicativo basato sull'approccio a microservizi}
+\Keywords{Microservizi\sep Springboot\sep Docker\sep Kubernetes\sep Maven}
+\end{filecontents*}
+
+\documentclass[a4paper,oneside,11pt,openright,table]{book}
+
+\usepackage{packages}
+
+\begin{document}
+
+\frontmatter
+\input{capitoli/fronte.tex}
+\input{capitoli/dedica.tex}
+
+\pagenumbering{roman}
+\input{capitoli/abstract.tex}
+\tableofcontents
+\input{capitoli/indici/list_of_figures.tex}
+\input{capitoli/indici/list_of_tables.tex}
+\input{capitoli/indici/list_of_abbrevations.tex}
+
+\mainmatter
+\pagenumbering{arabic}
+\input{capitoli/Introduzione.tex}
+\input{capitoli/stato_arte.tex}
+\input{capitoli/software.tex}
+\input{capitoli/hello_world.tex}
+\input{capitoli/conclusioni.tex}
+
+\backmatter
+\input{capitoli/ringraziamenti.tex}
+\printbibliography
+\end{document}
